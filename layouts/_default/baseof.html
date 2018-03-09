@@ -8,18 +8,12 @@
     {{ else }}
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     {{ end }}
-    <link rel="canonical" href="https://{{ .Site.Params.domain }}{{.URL | relURL }}"/>
-    {{/* https://www.zachleat.com/web/preload/
-    <link rel="preload" href="{{ "files/somefont-200.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ "files/somefont-400.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ "files/somefont-800.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
-    */}}
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="shortcut icon" href="/favicon.ico">
     <style>
       body {
-        font-family: 'Raleway';
+        font-family: 'Roboto';
         font-size: 14px;
       }
     </style>

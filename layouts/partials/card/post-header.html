@@ -1,7 +1,7 @@
 <div class="mdc-card">
     <section class="mdc-card__primary mdc-theme-primary">
       <h1 class="mdc-card__title mdc-card__title--large"><span class="mdc-theme--secondary mdc-typography--display3">{{ .Title }}</span></h1>
-      <h2 class="mdc-card__subtitle"><span class="mdc-theme--primary">{{ .Date.Format "Jan 2, 2006" }}</span></h2>
+      <h2 class="mdc-card__subtitle"><span class="mdc-theme--primary">{{ .Date.Format "2006-01-02" }}</span></h2>
     </section>
     <section class="mdc-card__supporting-text">
       {{if .Params.categories}}
@@ -17,7 +17,7 @@
       {{ if gt (len .Params.tags) 0}}
       <p>
         Tags: {{ range .Params.tags }}
-        <a class="mdc-button mdc-button--stroked mdc-button--dense " href="{{ (print "/tags/" ( lower . )) | relURL }}">{{ . | humanize }}</a>
+        <a class="mdc-button mdc-button--stroked mdc-button--dense " href="{{ print $.Site.Taxonomies.tag}}{{ "/" | relLangURL}}{{ . | relURL }}">{{ . | humanize }}</a>
         {{ end }}
         </p>
         {{ end }}
